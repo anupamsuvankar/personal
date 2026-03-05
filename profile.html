@@ -17,194 +17,229 @@
             }
         }
     </script>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-body {
-    background: linear-gradient(-45deg,#0f172a,#1e293b,#0f172a,#111827);
-    background-size:400% 400%;
-    animation:gradient 15s ease infinite;
-    color:#e2e8f0;
-}
+        body {
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #111827);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #e2e8f0;
+        }
 
-@keyframes gradient {
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
 
-.container {
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:60px 0;
-}
+            50% {
+                background-position: 100% 50%;
+            }
 
-.section {
-    margin-bottom:40px;
-    animation:fadeUp 1s ease forwards;
-    opacity:0;
-}
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-@keyframes fadeUp {
-    to { opacity:1; transform:translateY(0); }
-    from { opacity:0; transform:translateY(30px); }
-}
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 0;
+        }
 
-h1 {
-    font-size:3rem;
-    margin-bottom:10px;
-}
+        .section {
+            margin-bottom: 40px;
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+        }
 
-.highlight {
-    color:#38bdf8;
-}
+        .action-btns {
+            position: absolute;
+            right: 0px;
+        }
 
-.subtitle {
-    font-size:1.2rem;
-    color:#94a3b8;
-    margin-bottom:20px;
-}
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-.card {
-    background:rgba(30,41,59,0.8);
-    backdrop-filter:blur(10px);
-    padding:30px;
-    border-radius:14px;
-    margin-top:20px;
-    transition:0.3s;
-}
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+        }
 
-.card:hover {
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.6);
-}
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
 
-.skills {
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:15px;
-}
+        .highlight {
+            color: #38bdf8;
+        }
 
-.skill {
-    background:#334155;
-    padding:8px 14px;
-    border-radius:20px;
-    transition:0.3s;
-}
+        .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
 
-.skill:hover {
-    background:#38bdf8;
-    color:#0f172a;
-}
+        .card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 14px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
 
-.timeline-item {
-    margin-bottom:20px;
-    border-left:3px solid #38bdf8;
-    padding-left:15px;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
 
-.btn {
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 20px;
-    background:#38bdf8;
-    color:#0f172a;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    transition:0.3s;
-}
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
 
-.btn:hover {
-    background:#0ea5e9;
-    transform:translateY(-3px);
-}
+        .skill {
+            background: #334155;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
 
-.tech-used {
-    font-size: 0.9rem;
-    color: #94a3b8;
-    margin-top: 8px;
-}
+        .skill:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
 
-.expand-btn {
-    margin-top: 12px;
-    padding: 6px 12px;
-    background: transparent;
-    border: 1px solid #38bdf8;
-    color: #38bdf8;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        .timeline-item {
+            margin-bottom: 20px;
+            border-left: 3px solid #38bdf8;
+            padding-left: 15px;
+        }
 
-.expand-btn:hover {
-    background: #38bdf8;
-    color: #0f172a;
-}
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.projects {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    margin-top: 10px;
-}
+        .btn:hover {
+            background: #0ea5e9;
+            transform: translateY(-3px);
+        }
 
-.projects ul {
-    margin-top: 10px;
-    padding-left: 18px;
-}
+        .tech-used {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-top: 8px;
+        }
 
-.projects li {
-    margin-bottom: 6px;
-}
+        .expand-btn {
+            margin-top: 12px;
+            padding: 6px 12px;
+            background: transparent;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
+        .expand-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
 
-.tech-card {
-    background: rgba(30, 41, 59, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
+        .projects {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            margin-top: 10px;
+        }
 
-.tech-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-}
+        .projects ul {
+            margin-top: 10px;
+            padding-left: 18px;
+        }
 
-.tech-card h3 {
-    margin-bottom: 15px;
-    color: #38bdf8;
-}
-  </style>
+        .projects li {
+            margin-bottom: 6px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tech-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .tech-card h3 {
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+    </style>
 </head>
 
 <body>
+
     <div class="container">
 
         <!-- HERO -->
         <div class="section">
+            <div class="action-btns">
+                <a href="/static/Anupam_profile.pdf" class="btn">Download CV</a>
+                <a href="/my-servers" class="btn">My Servers</a>
+            </div>
             <h1>Anupam <span class="highlight">Suvankar</span></h1>
             <div class="subtitle" id="typing"></div>
-            <p>
-                <span class="bold-summery"><strong>Automation & Data Operations Professional</strong></span> with 4+
-                years at Amazon, specializing in <span class="bold-summery"><strong>process automation, data analysis,
-                        and operational tooling</strong></span>.
-                Proven track record of building <span class="bold-summery"><strong>Python, Selenium, and Pandas based
-                        automations</strong></span>, improving productivity, data accuracy, and turnaround time across
-                RBS and CMT teams.
-                Experienced in end-to-end automation, dashboarding, and ML-based data quality detection, with strong
-                ownership and multiple excellence awards.
+            <div class="card">
+                <p>
+                    <span class="bold-summery"><strong>Automation & Data Operations Professional</strong></span> with 4+
+                    years at Amazon, specializing in <span class="bold-summery"><strong>process automation, data
+                            analysis,
+                            and operational tooling</strong></span>.
+                    Proven track record of building <span class="bold-summery"><strong>Python, Selenium, and Pandas
+                            based
+                            automations</strong></span>, improving productivity, data accuracy, and turnaround time
+                    across
+                    RBS and CMT teams.
+                    Experienced in end-to-end automation, dashboarding, and ML-based data quality detection, with strong
+                    ownership and multiple excellence awards.
 
-            </p>
+                </p>
+            </div>
         </div>
 
         <!-- EXPERIENCE -->
@@ -214,43 +249,47 @@ h1 {
             <div style="margin-top: 20px;">
                 <!-- CMT -->
                 <div class="timeline-item">
-                    <strong>Process Associate – Amazon (CMT)</strong><br>
-                    Automation-focused competitor intelligence and catalog optimization.
+                    <div class="card">
+                        <strong>Process Associate – Amazon (CMT)</strong><br>
+                        Automation-focused competitor intelligence and catalog optimization.
 
-                    <div class="tech-used">Tech: Python, Selenium, Pandas, Flask</div>
+                        <div class="tech-used">Tech: Python, Selenium, Pandas, Flask</div>
 
-                    <button class="expand-btn" onclick="toggleProjects('cmt')">
-                        View Projects ▼
-                    </button>
+                        <button class="expand-btn" onclick="toggleProjects('cmt')">
+                            View Projects ▼
+                        </button>
 
-                    <div class="projects" id="cmt">
-                        <ul>
-                            <li>Redrive Engine – Automated daily portal workflows with status email system</li>
-                            <li>Selection Central Dashboard – Unified extract, upload & validation tools</li>
-                            <li>Contribution Removal Automation – Reduced manual QA workload</li>
-                            <li>Size Segregation Tool – Bulk validation & normalization engine</li>
-                        </ul>
+                        <div class="projects" id="cmt">
+                            <ul>
+                                <li>Redrive Engine – Automated daily portal workflows with status email system</li>
+                                <li>Selection Central Dashboard – Unified extract, upload & validation tools</li>
+                                <li>Contribution Removal Automation – Reduced manual QA workload</li>
+                                <li>Size Segregation Tool – Bulk validation & normalization engine</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <!-- RBS -->
                 <div class="timeline-item">
-                    <strong>Catalog Associate – Amazon (RBS)</strong><br>
-                    Python automation developer for catalog audits and defect reduction.
+                    <div class="card">
+                        <strong>Catalog Associate – Amazon (RBS)</strong><br>
+                        Python automation developer for catalog audits and defect reduction.
 
-                    <div class="tech-used">Tech: Python, Pandas, scikit-learn, Selenium</div>
+                        <div class="tech-used">Tech: Python, Pandas, scikit-learn, Selenium</div>
 
-                    <button class="expand-btn" onclick="toggleProjects('rbs')">
-                        View Projects ▼
-                    </button>
+                        <button class="expand-btn" onclick="toggleProjects('rbs')">
+                            View Projects ▼
+                        </button>
 
-                    <div class="projects" id="rbs">
-                        <ul>
-                            <li>CSI Extractor – Selenium-based structured data extraction tool</li>
-                            <li>Misclassified ASIN ML Model – Pattern detection using scikit-learn</li>
-                            <li>Production Display Dashboard – Real-time tracking tool (customtkinter)</li>
-                            <li>Processed File Translation Automation – Attribute normalization system</li>
-                        </ul>
+                        <div class="projects" id="rbs">
+                            <ul>
+                                <li>CSI Extractor – Selenium-based structured data extraction tool</li>
+                                <li>Misclassified ASIN ML Model – Pattern detection using scikit-learn</li>
+                                <li>Production Display Dashboard – Real-time tracking tool (customtkinter)</li>
+                                <li>Processed File Translation Automation – Attribute normalization system</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -340,27 +379,25 @@ h1 {
             </div>
         </div>
 
-        <a href="Anupam_profile.pdf" class="btn">Download CV</a>
-        <a href="https://camcorders-explorer-issued-examples.trycloudflare.com" class="btn">My Servers</a>
+
     </div>
     <script>
-      const roles = [
-"Python Developer ⚙️"
-];
+        const roles = [
+            "Python Developer ⚙️"
+        ];
 
-let i=0,j=0,current="",letter="";
-(function type(){
-if(i===roles.length){i=0}
-current=roles[i];
-letter=current.slice(0,++j);
-document.getElementById("typing").textContent=letter;
+        let i = 0, j = 0, current = "", letter = "";
+        (function type() {
+            if (i === roles.length) { i = 0 }
+            current = roles[i];
+            letter = current.slice(0, ++j);
+            document.getElementById("typing").textContent = letter;
 
-if(letter.length===current.length){
-setTimeout(()=>{j=0;i++;setTimeout(type,300)},10000);
-}else{setTimeout(type,60)}
-})();
+            if (letter.length === current.length) {
+                setTimeout(() => { j = 0; i++; setTimeout(type, 300) }, 10000);
+            } else { setTimeout(type, 60) }
+        })();
     </script>
 </body>
 
 </html>
-
