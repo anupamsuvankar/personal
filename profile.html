@@ -396,7 +396,7 @@
             } else { setTimeout(type, 60) }
         })();
 
-        fetch("tunnel.json")
+        fetch("tunnels.json")
             .then(res => res.json())
             .then(data => {
                 document.querySelector("#serverBtn").href = data.personal;
