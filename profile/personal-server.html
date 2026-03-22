@@ -11,7 +11,7 @@
     fetch("../tunnels.json")
       .then(res => res.json())
       .then(data => {
-        window.location.href = data.personal;
+        window.location.replace(data.personal);
       })
       .catch(() => {
         document.body.innerHTML = "Failed to load redirect.";
