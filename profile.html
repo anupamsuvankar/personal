@@ -223,7 +223,7 @@
         <div class="section">
             <div class="action-btns">
                 <a href="Anupam_profile.pdf" class="btn">Download CV</a>
-                <a id="serverBtn" class="btn">My Servers</a>
+                <a href="https://anupamsuvankar.github.io/personal/profile/personal-server" id="serverBtn" class="btn">My Servers</a>
             </div>
             <h1>Anupam <span class="highlight">Suvankar</span></h1>
             <div class="subtitle" id="typing"></div>
@@ -416,12 +416,12 @@
             } else { setTimeout(type, 60) }
         })();
 
-        fetch("tunnels.json")
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                document.querySelector("#serverBtn").href = data.personal;
-            });
+        // fetch("tunnels.json")
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        //         document.querySelector("#serverBtn").href = data.personal;
+        //     });
     </script>
 </body>
 
