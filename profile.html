@@ -416,12 +416,12 @@
             } else { setTimeout(type, 60) }
         })();
 
-        // fetch("tunnels.json")
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         document.querySelector("#serverBtn").href = data.personal;
-        //     });
+        fetch("tunnels.json")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                document.querySelector("#serverBtn").href = data.personal;
+            });
     </script>
 </body>
 
