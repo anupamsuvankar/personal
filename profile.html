@@ -223,7 +223,8 @@
         <div class="section">
             <div class="action-btns">
                 <a href="Anupam_profile.pdf" class="btn">Download CV</a>
-                <a href="https://anupamsuvankar.github.io/personal/profile/personal-server" id="serverBtn" class="btn">My Servers</a>
+                <a href="https://anupamsuvankar.github.io/personal/profile/personal-server" id="serverBtn"
+                    class="btn">My Servers</a>
             </div>
             <h1>Anupam <span class="highlight">Suvankar</span></h1>
             <div class="subtitle" id="typing"></div>
@@ -231,12 +232,16 @@
                 <p>
                     <span class="bold-summery"><strong>Python Developer</strong></span> with 4+ years of
                     experience at Amazon, in building
-                    <span class="bold-summery"><strong>scalable applications, automation solutions, and data processing systems</strong></span>.
+                    <span class="bold-summery"><strong>scalable applications, automation solutions, and data processing
+                            systems</strong></span>.
                     across enterprise environments. Strong expertise in
                     <span class="bold-summery"><strong>Python, Flask, Pandas, and Selenium, </strong></span>
                     with hands-on experience in developing
-                    <span class="bold-summery"><strong>REST APIs, automation pipelines, and data-driven applications. </strong></span>
-                    Proven ability to write clean, maintainable code following best practices, perform code reviews, and optimize performance. Adept at collaborating with cross-functional teams to deliver high-quality software solutions.
+                    <span class="bold-summery"><strong>REST APIs, automation pipelines, and data-driven applications.
+                        </strong></span>
+                    Proven ability to write clean, maintainable code following best practices, perform code reviews, and
+                    optimize performance. Adept at collaborating with cross-functional teams to deliver high-quality
+                    software solutions.
                 </p>
             </div>
         </div>
@@ -341,7 +346,7 @@
 
             <div class="tech-grid">
 
-                 <div class="tech-card">
+                <div class="tech-card">
                     <h3>💻 Programming & Scripting</h3>
                     <div class="skills">
                         <div class="skill">Python</div>
@@ -418,9 +423,23 @@
 
         fetch("tunnels.json")
             .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                document.querySelector("#serverBtn").href = data.personal;
+            .then(async data => {
+                const btn = document.querySelector("#serverBtn");
+
+                try {
+                    const response = await fetch(data.personal, { method: "HEAD" });
+
+                    if (response.ok) {
+                        btn.href = data.personal;
+                    } else {
+                        btn.href = "server-down.html";
+                    }
+                } catch (err) {
+                    btn.href = "server-down.html";
+                }
+            })
+            .catch(err => {
+                console.error("Failed to load tunnels.json", err);
             });
     </script>
 </body>
