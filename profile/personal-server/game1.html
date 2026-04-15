@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+  </head>
+
+  <body>
+    <p>Redirecting...</p>
+
+    <script>
+      fetch("../../tunnels.json")
+        .then((res) => res.json())
+        .then(async (data) => {
+          try {
+            const response = await fetch(data.game1, { method: "HEAD" });
+
+            if (response.ok) {
+              window.location.href = data.game1;
+            } else {
+              window.location.href = "server-down.html";
+            }
+          } catch (err) {
+            window.location.href = "server-down.html";
+          }
+        })
+        .catch(() => {
+          document.body.innerHTML = "Failed to load redirect.";
+        });
+    </script>
+  </body>
+</html>
