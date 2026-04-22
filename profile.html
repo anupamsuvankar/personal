@@ -76,6 +76,12 @@
         .sub-sec {
           flex-direction: column;
           align-items: flex-start;
+          gap: 10px;
+        }
+
+        .action-btns {
+          width: 100%;
+          justify-content: flex-start;
         }
 
         .timeline-item {
@@ -107,22 +113,22 @@
         gap: 10px;
       }
 
-      .action-btns {
-        display: flex;
-        gap: 10px;
-        justify-content: flex-end;
-        flex-wrap: wrap;
+      .action-btns a {
+        max-height: max-content;
+        align-self: anchor-center;
+        right: 0px;
+        position: fixed;
       }
 
       @keyframes fadeUp {
         to {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(15px);
         }
 
         from {
           opacity: 0;
-          transform: translateY(30px);
+          transform: translateY(0);
         }
       }
 
@@ -265,12 +271,13 @@
 
   <body>
     <div class="container">
-      <!-- HERO -->
       <div class="section">
-        <div class="action-btns">
-          <a href="Anupam_profile.pdf" class="btn">Download CV</a>
+        <div class="sub-sec">
+          <h1>Anupam <span class="highlight">Suvankar</span></h1>
+          <div class="action-btns">
+            <a href="Anupam_profile.pdf" class="btn">Download CV</a>
+          </div>
         </div>
-        <h1>Anupam <span class="highlight">Suvankar</span></h1>
         <div class="subtitle" id="typing"></div>
         <div class="card">
           <p>
@@ -308,12 +315,10 @@
         </div>
       </div>
 
-      <!-- EXPERIENCE -->
       <div class="section">
         <h2 class="highlight">Experience</h2>
 
         <div style="margin-top: 20px">
-          <!-- CMT -->
           <div class="timeline-item">
             <div class="card">
               <strong>Python Developer – Amazon (CMT)</strong><br />
@@ -358,7 +363,6 @@
             </div>
           </div>
 
-          <!-- RBS -->
           <div class="timeline-item">
             <div class="card">
               <strong>Python Developer – Amazon (RBS)</strong><br />
@@ -433,15 +437,16 @@
               </ul>
             </div>
           </div>
-          <button class="btn" onclick="window.location.href = 'projects.html'">
-            View All Projects
-          </button>
         </div>
       </div>
 
       <div class="section">
-        <h2 class="highlight">Projects</h2>
-
+        <div class="sub-sec">
+          <h2 class="highlight">Projects</h2>
+          <button class="btn" onclick="window.location.href = 'projects.html'">
+            View All Projects
+          </button>
+        </div>
         <div class="card">
           Built 15+ internal tools including:
           <ul>
@@ -454,7 +459,6 @@
         </div>
       </div>
 
-      <!-- WEB APPS -->
       <div class="section">
         <h2 class="highlight">Web Applications</h2>
 
@@ -493,7 +497,6 @@
         </div>
       </div>
 
-      <!-- TECH STACK -->
       <div class="section">
         <h2 class="highlight">Tech Stack</h2>
 
