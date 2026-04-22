@@ -577,24 +577,42 @@
       })();
 
       fetch("tunnels.json")
-        .then((res) => res.json())
+        .then((res) => {
+          console.log("Fetching tunnels.json...");
+          return res.json();
+        })
         .then(async (data) => {
+          console.log("tunnels.json loaded:", data);
+
           const btn = document.querySelector("#serverBtn");
+
+          if (!data.personal) {
+            console.warn("⚠️ 'personal' URL not found in tunnels.json");
+            btn.href = "server-down.html";
+            return;
+          }
+
+          console.log("Checking server:", data.personal);
 
           try {
             const response = await fetch(data.personal, { method: "HEAD" });
 
+            console.log("Server response status:", response.status);
+
             if (response.ok) {
+              console.log("✅ Server is UP. Redirecting to:", data.personal);
               btn.href = data.personal;
             } else {
+              console.warn("⚠️ Server responded but not OK:", response.status);
               btn.href = "server-down.html";
             }
           } catch (err) {
+            console.error("❌ Error reaching server:", err);
             btn.href = "server-down.html";
           }
         })
         .catch((err) => {
-          console.error("Failed to load tunnels.json", err);
+          console.error("❌ Failed to load tunnels.json:", err);
         });
     </script>
   </body>
