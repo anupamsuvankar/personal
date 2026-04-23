@@ -19,10 +19,12 @@
             if (response.ok) {
               window.location.href = data.nas;
             } else {
-              window.location.href = "server-down.html";
+              // window.location.href = "server-down.html";
+              console.error("NAS server is not reachable.");
             }
           } catch (err) {
-            window.location.href = "server-down.html";
+            // window.location.href = "server-down.html";
+            console.error("NAS server is not reachable.");
           }
         })
         .catch(() => {
