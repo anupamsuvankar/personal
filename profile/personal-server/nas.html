@@ -12,10 +12,10 @@
       fetch("../../tunnels.json")
         .then((res) => res.json())
         .then(async (data) => {
+          alert(data);
           try {
             const response = await fetch(data.nas, { method: "HEAD" });
             alert(response.status);
-            alert(data);
             if (response.ok) {
               window.location.href = data.nas;
             } else {
