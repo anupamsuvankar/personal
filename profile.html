@@ -586,8 +586,12 @@
 
           const btn = document.querySelector("#serverBtn");
 
+          // Disable button initially
+          btn.style.pointerEvents = "none";
+          btn.style.opacity = "0.5";
+
           if (!data.personal) {
-            console.warn("⚠️ 'personal' URL not found in tunnels.json");
+            console.warn("⚠️ 'personal' URL not found");
             btn.href = "server-down.html";
             return;
           }
@@ -595,21 +599,25 @@
           console.log("Checking server:", data.personal);
 
           try {
-            const response = await fetch(data.personal, { method: "HEAD" });
+            const response = await fetch(data.personal, { method: "GET" });
 
-            console.log("Server response status:", response.status);
+            console.log("Status:", response.status);
 
             if (response.ok) {
-              console.log("✅ Server is UP. Redirecting to:", data.personal);
+              console.log("✅ Server is UP");
               btn.href = data.personal;
             } else {
-              console.warn("⚠️ Server responded but not OK:", response.status);
+              console.warn("⚠️ Server not OK:", response.status);
               btn.href = "server-down.html";
             }
           } catch (err) {
-            console.error("❌ Error reaching server:", err);
+            console.error("❌ Fetch failed:", err);
             btn.href = "server-down.html";
           }
+
+          // Enable button
+          btn.style.pointerEvents = "auto";
+          btn.style.opacity = "1";
         })
         .catch((err) => {
           console.error("❌ Failed to load tunnels.json:", err);
