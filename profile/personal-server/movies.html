@@ -1,34 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Redirecting...</title>
-</head>
+  <body>
+    <style>
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
 
-<body>
-  <p>Redirecting...</p>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 2rem;
+        font-family: sans-serif;
+        animation: fadeIn 0.5s ease;
+      "
+    >
+      <div
+        style="
+          width: 40px;
+          height: 40px;
+          border: 2px solid #e0e0e0;
+          border-top-color: #888;
+          border-radius: 50%;
+          animation: spin 0.9s linear infinite;
+        "
+      ></div>
 
-  <script>
-    fetch("../../tunnels.json")
-      .then(res => res.json())
-      .then(async data => {
-        try {
-          const response = await fetch(data.movie, { method: "HEAD" });
+      <div style="text-align: center">
+        <p
+          style="
+            margin: 0 0 6px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #111;
+          "
+        >
+          Redirecting you
+        </p>
+        <p style="margin: 0; font-size: 13px; color: #888">
+          To your Movie Server... (if it doesn't load, the server is likely
+          down)
+        </p>
+      </div>
 
-          if (response.ok) {
-            window.location.href = data.movie;
-          } else {
+      <div style="display: flex; gap: 6px; align-items: center">
+        <div
+          style="
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #bbb;
+            animation: pulse 1.4s ease-in-out infinite;
+          "
+        ></div>
+        <div
+          style="
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #bbb;
+            animation: pulse 1.4s ease-in-out 0.2s infinite;
+          "
+        ></div>
+        <div
+          style="
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #bbb;
+            animation: pulse 1.4s ease-in-out 0.4s infinite;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <script>
+      fetch("../../tunnels.json")
+        .then((res) => res.json())
+        .then(async (data) => {
+          try {
+            const response = await fetch(data.movie, { method: "HEAD" });
+
+            if (response.ok) {
+              window.location.href = data.movie;
+            } else {
+              window.location.href = "server-down.html";
+            }
+          } catch (err) {
             window.location.href = "server-down.html";
           }
-        } catch (err) {
-          window.location.href = "server-down.html";
-        }
-      })
-      .catch(() => {
-        document.body.innerHTML = "Failed to load redirect.";
-      });
-  </script>
-</body>
-
+        })
+        .catch(() => {
+          document.body.innerHTML = "Failed to load redirect.";
+        });
+    </script>
+  </body>
 </html>

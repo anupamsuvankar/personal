@@ -68,8 +68,7 @@
           Redirecting you
         </p>
         <p style="margin: 0; font-size: 13px; color: #888">
-          To your Monitor Dashboard... (if it doesn't load, the server is likely
-          down)
+          To your inventory... (if it doesn't load, the server is likely down)
         </p>
       </div>
 
@@ -109,10 +108,10 @@
         .then((res) => res.json())
         .then(async (data) => {
           try {
-            const response = await fetch(data.monitor, { method: "HEAD" });
+            const response = await fetch(data.inventory, { method: "HEAD" });
 
             if (response.ok) {
-              window.location.href = data.monitor;
+              window.location.href = data.inventory;
             } else {
               window.location.href = "server-down.html";
             }
