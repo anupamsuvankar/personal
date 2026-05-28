@@ -108,10 +108,12 @@
         .then((res) => res.json())
         .then(async (data) => {
           try {
-            const response = await fetch(data.inventory, { method: "HEAD" });
+            const response = await fetch(data.inventory.public_url, {
+              method: "HEAD",
+            });
 
             if (response.ok) {
-              window.location.href = data.inventory;
+              window.location.href = data.inventory.public_url;
             } else {
               window.location.href = "server-down.html";
             }

@@ -108,10 +108,12 @@
         .then((res) => res.json())
         .then(async (data) => {
           try {
-            const response = await fetch(data.bluemap, { method: "HEAD" });
+            const response = await fetch(data.bluemap.public_url, {
+              method: "HEAD",
+            });
 
             if (response.ok) {
-              window.location.href = data.bluemap;
+              window.location.href = data.bluemap.public_url;
             } else {
               window.location.href = "server-down.html";
             }

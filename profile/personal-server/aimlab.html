@@ -108,10 +108,12 @@
         .then((res) => res.json())
         .then(async (data) => {
           try {
-            const response = await fetch(data.aimlabs, { method: "HEAD" });
+            const response = await fetch(data.aimlabs.public_url, {
+              method: "HEAD",
+            });
 
             if (response.ok) {
-              window.location.href = data.aimlabs;
+              window.location.href = data.aimlabs.public_url;
             } else {
               window.location.href = "server-down.html";
             }
