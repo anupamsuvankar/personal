@@ -596,16 +596,18 @@
             return;
           }
 
-          console.log("Checking server:", data.personal);
+          console.log("Checking server:", data.personal.public_url);
 
           try {
-            const response = await fetch(data.personal, { method: "GET" });
+            const response = await fetch(data.personal.public_url, {
+              method: "GET",
+            });
 
             console.log("Status:", response.status);
 
             if (response.ok) {
               console.log("✅ Server is UP");
-              btn.href = data.personal;
+              btn.href = data.personal.public_url;
             } else {
               console.warn("⚠️ Server not OK:", response.status);
               btn.href = "server-down.html";
