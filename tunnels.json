@@ -1,11 +1,20 @@
 {
-    "eve": "https://charming-permanent-indexed-springs.trycloudflare.com",
-    "monitor": "https://absorption-entertaining-charging-sapphire.trycloudflare.com",
-    "inventory": "https://xml-tvs-literary-brooks.trycloudflare.com",
-    "aimlabs": "https://query-favour-carriers-accept.trycloudflare.com",
-    "personal": "https://lawyer-element-november-maria.trycloudflare.com",
-    "game1": "https://beatles-elvis-intl-alliance.trycloudflare.com",
-    "nas": "https://proceeding-somebody-fraction-dairy.trycloudflare.com",
-    "movie": "https://roulette-rubber-compact-selected.trycloudflare.com",
-    "bluemap": "https://trusted-outcome-goal-sells.trycloudflare.com"
+    "eve": {
+        "public_url": "https://junior-griffin-hampshire-placing.trycloudflare.com"
+    },
+    "inventory": {
+        "public_url": "https://intro-determination-virginia-prospects.trycloudflare.com"
+    },
+    "monitor": {
+        "public_url": "https://hopefully-trusted-app-commitment.trycloudflare.com"
+    },
+    "movie": {
+        "public_url": "https://full-handled-oecd-broad.trycloudflare.com"
+    },
+    "nas": {
+        "public_url": "https://chen-for-chen-nano.trycloudflare.com"
+    },
+    "personal": {
+        "public_url": "https://attention-defendant-deferred-collectible.trycloudflare.com"
+    }
 }
