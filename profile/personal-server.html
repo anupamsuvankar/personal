@@ -115,11 +115,11 @@
             if (response.ok) {
               window.location.href = data.personal.public_url;
             } else {
-              window.location.href = "server-down.html";
+              window.location.href = "personal-server/server-down.html";
               console.error("Personal server is not reachable.");
             }
           } catch (err) {
-            window.location.href = "server-down.html";
+            window.location.href = "personal-server/server-down.html";
             console.error("Personal server is not reachable.");
           }
         })
