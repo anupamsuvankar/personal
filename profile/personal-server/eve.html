@@ -108,9 +108,10 @@
       fetch("../../tunnels.json")
         .then((res) => res.json())
         .then(async (data) => {
-          const dashboardUrl = data.eve.public_url;
+          const eveUrl = data.eve.public_url;
+          const dashboardUrl = data.personal.public_url;
           try {
-            const res = await fetch(`${dashboardUrl}/health`);
+            const res = await fetch(`${eveUrl}/health`);
             if (res.ok) {
               window.location.href = `${dashboardUrl}`;
             } else {
