@@ -108,22 +108,20 @@
       fetch("../../tunnels.json")
         .then((res) => res.json())
         .then(async (data) => {
+          const dashboardUrl = data.eve.public_url;
           try {
-            const response = await fetch(data.eve.public_url, {
-              method: "HEAD",
-            });
-
-            if (response.ok) {
-              window.location.href = data.eve.public_url;
+            const res = await fetch(`${dashboardUrl}/health`);
+            if (res.ok) {
+              window.location.href = `${dashboardUrl}`;
             } else {
               window.location.href = "server-down.html";
             }
-          } catch (err) {
+          } catch {
             window.location.href = "server-down.html";
           }
         })
         .catch(() => {
-          document.body.innerHTML = "Failed to load redirect.";
+          document.body.innerHTML = "Failed to load tunnels.json";
         });
     </script>
   </body>
