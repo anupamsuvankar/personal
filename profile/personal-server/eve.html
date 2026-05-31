@@ -109,11 +109,10 @@
         .then((res) => res.json())
         .then(async (data) => {
           const eveUrl = data.eve.public_url;
-          const dashboardUrl = data.personal.public_url;
           try {
             const res = await fetch(`${eveUrl}/health`);
             if (res.ok) {
-              window.location.href = `${dashboardUrl}`;
+              window.location.href = `${eveUrl}`;
             } else {
               window.location.href = "server-down.html";
             }
