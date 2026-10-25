@@ -68,7 +68,7 @@
           Redirecting you
         </p>
         <p style="margin: 0; font-size: 13px; color: #888">
-          To your Plex server... (if it doesn't load, the server is likely down)
+          To your HA server... (if it doesn't load, the server is likely down)
         </p>
       </div>
 
@@ -108,18 +108,18 @@
         .then((res) => res.json())
         .then(async (data) => {
           try {
-            const response = await fetch(data.plex.public_url, {
+            const response = await fetch(data.ha.public_url, {
               method: "HEAD",
             });
             if (response.ok) {
-              window.location.href = data.plex.public_url;
+              window.location.href = data.ha.public_url;
             } else {
               window.location.href = "server-down.html";
-              console.error("Plex server is not reachable.");
+              console.error("HA server is not reachable.");
             }
           } catch (err) {
             window.location.href = "server-down.html";
-            console.error("Plex server is not reachable.");
+            console.error("HA server is not reachable.");
           }
         })
         .catch(() => {
