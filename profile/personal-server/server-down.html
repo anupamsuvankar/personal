@@ -1,51 +1,849 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: system-ui;
-    background: linear-gradient(135deg, #020617, #1e293b);
-    color: #e2e8f0;
-    text-align: center;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Server down</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <noscript
+      ><p style="font-family: system-ui, sans-serif; padding: 2rem">
+        Server down. Please try again in a little while.
+      </p></noscript
+    >
 
-.box {
-    animation: fadeIn 1.5s ease;
-}
+    <script type="text/plain" data-design="checklist">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --bg: #e9eef3;
+        --card: #fff;
+        --ink: #18212f;
+        --muted: #667388;
+        --line: #b9c4d2;
+        --ok: #2f9e6b;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.5;
+      }
+      .ticket {
+        width: 100%;
+        max-width: 500px;
+        padding: 36px 32px 28px;
+        background: var(--card);
+        border-radius: 14px;
+        border: 2px dashed var(--line);
+        box-shadow: 0 0 0 8px var(--card);
+      }
+      h1 { margin: 0 0 6px; font-size: clamp(2rem, 7vw, 2.6rem); font-weight: 750; letter-spacing: -.025em; line-height: 1.1; }
+      .sub { margin: 0 0 26px; color: var(--muted); }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+      ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 16px; }
+      li { display: flex; gap: 14px; align-items: flex-start; }
+      .box {
+        flex: none;
+        width: 22px; height: 22px;
+        margin-top: 2px;
+        border: 2px solid var(--line);
+        border-radius: 6px;
+      }
+      .done .box { background: var(--ok); border-color: var(--ok); position: relative; }
+      .done .box::after {
+        content: "";
+        position: absolute;
+        left: 6px; top: 2px;
+        width: 6px; height: 11px;
+        border: solid #fff;
+        border-width: 0 2.5px 2.5px 0;
+        transform: rotate(45deg);
+      }
+      strong { display: block; font-weight: 650; }
+      li span { color: var(--muted); font-size: .95rem; }
 
-.icon {
-    font-size: 3.5rem;
-    animation: float 4s ease-in-out infinite;
-}
+      .foot { margin: 28px 0 0; padding-top: 16px; border-top: 1px dashed var(--line); font: 13px ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--muted); }
+      </style>
+      </head>
+      <body>
+        <main class="ticket">
+          <h1 style="color: red">Server down.</h1>
+          <p class="sub">Yep, it’s down. We know. You know. Here’s a checklist anyway.</p>
 
-@keyframes float {
-    50% { transform: translateY(-12px); }
-}
+          <ul>
+            <li class="done"><i class="box"></i><div><strong>Check your internet connection</strong><span>It’s fine. You’re reading this.</span></div></li>
+            <li class="done"><i class="box"></i><div><strong>Refresh the page</strong><span>Go on. We’ll wait.</span></div></li>
+            <li class="done"><i class="box"></i><div><strong>Refresh it again, but angrier</strong><span>Didn’t help, did it?</span></div></li>
+            <li><i class="box"></i><div><strong>Accept that it’s the server, not you</strong><span>Take your time.</span></div></li>
+          </ul>
 
-h1 {
-    margin-top: 15px;
-}
+          <p class="foot">Status: 503, <span style="color: red">server down</span>. It really isn’t you.</p>
+        </main>
+      </body>
+      </html>
+    </script>
 
-p {
-    opacity: 0.7;
-}
-</style>
-</head>
-<body>
-<div class="box">
-    <div class="icon">⚙️</div>
-    <h1>Under Maintenance</h1>
-    <p>We’ll be back shortly</p>
-</div>
-</body>
+    <script type="text/plain" data-design="sleeping">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --bg: #e9e6fb;
+        --box: #3b3a8f;
+        --dim: #7a79c9;
+        --ink: #23215c;
+        --muted: #5a5890;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.55;
+        text-align: center;
+      }
+      main { width: 100%; max-width: 440px; }
+      svg { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto 28px; overflow: visible; }
+      .body { fill: var(--box); }
+      .face { fill: none; stroke: var(--bg); stroke-width: 4; stroke-linecap: round; }
+      .led { fill: var(--dim); }
+      .feet { fill: var(--ink); }
+      .z { fill: var(--box); font: 700 20px ui-serif, Georgia, serif; opacity: 0; animation: rise 3.6s ease-out infinite; }
+      .z:nth-of-type(2) { animation-delay: 1.2s; }
+      .z:nth-of-type(3) { animation-delay: 2.4s; }
+      @keyframes rise {
+        0% { opacity: 0; transform: translate(0, 10px); }
+        20% { opacity: 1; }
+        100% { opacity: 0; transform: translate(14px, -26px); }
+      }
+      .body-g { animation: breathe 3.6s ease-in-out infinite; transform-origin: 100px 130px; }
+      @keyframes breathe { 50% { transform: scaleY(1.025); } }
+
+      h1 { margin: 0 0 10px; font-size: clamp(1.6rem, 5vw, 2.1rem); font-weight: 650; letter-spacing: -.015em; line-height: 1.2; }
+      p { margin: 0 auto; max-width: 38ch; color: var(--muted); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .z { animation: none; opacity: .7; }
+        .body-g { animation: none; }
+      }
+      </style>
+      </head>
+      <body>
+      <main>
+        <svg viewBox="0 0 200 160" role="img" aria-label="A sleeping server with closed eyes">
+          <g class="body-g">
+            <rect class="body" x="40" y="46" width="120" height="84" rx="20"/>
+            <circle class="led" cx="140" cy="64" r="4"/>
+            <path class="face" d="M68 90 q10 9 20 0 M112 90 q10 9 20 0 M95 110 q5 4 10 0"/>
+          </g>
+          <rect class="feet" x="58" y="130" width="22" height="8" rx="3"/>
+          <rect class="feet" x="120" y="130" width="22" height="8" rx="3"/>
+          <text class="z" x="152" y="42">z</text>
+          <text class="z" x="152" y="42" style="font-size:26px">z</text>
+          <text class="z" x="152" y="42" style="font-size:32px">Z</text>
+        </svg>
+
+        <h1><span style="color: red">Server down</span>. It’s asleep.</h1>
+        <p>It stopped responding and hasn’t woken up yet. Please try again in a little while.</p>
+      </main>
+      </body>
+      </html>
+    </script>
+
+    <script type="text/plain" data-design="nosignal">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        color: #fff;
+        overflow: hidden;
+        background: linear-gradient(90deg,
+          #c0c0c0 0 14.28%, #c0c000 0 28.56%, #00c0c0 0 42.84%, #00c000 0 57.12%,
+          #c000c0 0 71.4%, #c00000 0 85.68%, #0000c0 0 100%);
+      }
+      /* scanlines */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 1px, transparent 1px 3px);
+        pointer-events: none;
+      }
+      /* slow rolling band */
+      body::after {
+        content: "";
+        position: fixed;
+        left: 0; right: 0; top: 0;
+        height: 18vh;
+        background: linear-gradient(transparent, rgba(255,255,255,.12), transparent);
+        pointer-events: none;
+        animation: roll 7s linear infinite;
+      }
+      @keyframes roll { from { transform: translateY(-20vh); } to { transform: translateY(110vh); } }
+
+      .card {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 460px;
+        padding: 34px 30px 30px;
+        background: #000;
+        border: 2px solid #fff;
+        text-align: center;
+      }
+      h1 { margin: 0 0 14px; font-size: clamp(1.9rem, 8vw, 2.8rem); font-weight: 700; letter-spacing: .12em; line-height: 1.1; }
+      p { margin: 0 auto 8px; max-width: 34ch; font-size: .95rem; line-height: 1.6; color: #d4d4d4; }
+
+      @media (prefers-reduced-motion: reduce) { body::after { animation: none; display: none; } }
+      .sd { margin: 0 auto 14px; color: #fff; font-size: 1.15rem; font-weight: 700; letter-spacing: .22em; }
+      </style>
+      </head>
+      <body>
+        <main class="card">
+          <h1>NO SIGNAL</h1>
+          <p class="sd" style="color: red">SERVER DOWN</p>
+          <p>The server isn’t responding right now.</p>
+          <p>Please try again in a little while.</p>
+        </main>
+      </body>
+      </html>
+    </script>
+
+    <script type="text/plain" data-design="closed-sign">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --bg: #34506e;
+        --sign: #f7f8fa;
+        --ink: #1d2b3c;
+        --red: #c8404e;
+        --muted: #c3d1e2;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: var(--bg);
+        color: #fff;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.55;
+        text-align: center;
+      }
+      main { width: 100%; max-width: 440px; }
+      svg { display: block; width: 100%; max-width: 300px; height: auto; margin: 0 auto 20px; overflow: visible; }
+      .string { stroke: #e8d9b8; stroke-width: 2; fill: none; }
+      .nail { fill: #d8dde5; }
+      .sign { fill: var(--sign); }
+      .edge { fill: none; stroke: var(--red); stroke-width: 2; }
+      .hole { fill: var(--bg); }
+      .hang { transform-origin: 150px 16px; animation: swing 3.4s ease-in-out infinite alternate; }
+      @keyframes swing { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+      .big { font: 700 27px ui-serif, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .mid { font: 700 22px ui-serif, Georgia, "Times New Roman", serif; fill: var(--ink); }
+      .small { font: 700 13px system-ui, sans-serif; fill: var(--red); }
+
+      h1 { margin: 0 0 8px; font-size: 1.2rem; font-weight: 600; }
+      p { margin: 0 auto; max-width: 38ch; color: var(--muted); }
+
+      @media (prefers-reduced-motion: reduce) { .hang { animation: none; } }
+      </style>
+      </head>
+      <body>
+      <main>
+        <svg viewBox="0 0 300 210" role="img" aria-label="A sign hanging on a nail reading: Sorry, we’re closed">
+          <g class="hang">
+            <path class="string" d="M150 16 L100 74 M150 16 L200 74"/>
+            <rect class="sign" x="60" y="70" width="180" height="124" rx="10"/>
+            <rect class="edge" x="68" y="78" width="164" height="108" rx="6"/>
+            <circle class="hole" cx="100" cy="74" r="3"/>
+            <circle class="hole" cx="200" cy="74" r="3"/>
+            <text class="big" x="150" y="122" text-anchor="middle">Sorry,</text>
+            <text class="mid" x="150" y="152" text-anchor="middle">we’re closed</text>
+            <text class="small" x="150" y="174" text-anchor="middle" style="color: red">Server down</text>
+          </g>
+          <circle class="nail" cx="150" cy="16" r="5"/>
+        </svg>
+
+        <h1 style="color: red">Server down</h1>
+        <p>The server isn’t responding. Please try again in a little while.</p>
+      </main>
+      </body>
+      </html>
+    </script>
+
+    <script type="text/plain" data-design="review">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --bg: #2b3347;
+        --paper: #fdfdfb;
+        --ink: #1d2433;
+        --muted: #5f6a7e;
+        --line: #d9dde5;
+        --red: #c8404e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 28px 20px;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: ui-serif, Georgia, "Times New Roman", serif;
+        line-height: 1.5;
+      }
+      .paper {
+        width: 100%;
+        max-width: 540px;
+        padding: 38px 34px 34px;
+        background: var(--paper);
+        border-radius: 4px;
+        box-shadow: 0 24px 50px -24px rgba(0, 0, 0, .6);
+      }
+      h1 { margin: 0 0 4px; font-size: 1.9rem; font-weight: 700; letter-spacing: -.01em; line-height: 1.15; }
+      .meta { margin: 0 0 22px; padding-bottom: 16px; border-bottom: 2px solid var(--ink); color: var(--muted); font-size: .95rem; }
+
+      .row { padding: 14px 0; border-bottom: 1px solid var(--line); }
+      .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+      .label { font-weight: 700; }
+      .dots { color: var(--muted); letter-spacing: .25em; white-space: nowrap; }
+      .note { margin: 4px 0 0; color: var(--muted); font-style: italic; font-size: .95rem; }
+
+      .verdict { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 26px; flex-wrap: wrap; }
+      .hand { margin: 0; font: italic 1.25rem "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive; color: var(--red); transform: rotate(-3deg); }
+      .stamp {
+        padding: 6px 14px;
+        border: 3px solid var(--red);
+        border-radius: 6px;
+        color: var(--red);
+        font: 800 .95rem system-ui, sans-serif;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        transform: rotate(-6deg);
+      }
+      .sd { margin: -38px -34px 24px; padding: 10px 34px; border-radius: 4px 4px 0 0; background: var(--red); color: #fff; font: 700 .95rem system-ui, sans-serif; letter-spacing: .04em; }
+      </style>
+      </head>
+      <body>
+        <main class="paper">
+          <div class="sd">Server down</div>
+          <h1>Performance review</h1>
+          <p class="meta">Employee: This server. Period: Today, mostly.</p>
+
+          <div class="row">
+            <div class="top"><span class="label">Uptime</span><span class="dots" aria-label="0 out of 5">○○○○○</span></div>
+            <p class="note">Present in spirit only.</p>
+          </div>
+          <div class="row">
+            <div class="top"><span class="label">Responsiveness</span><span class="dots" aria-label="0 out of 5">○○○○○</span></div>
+            <p class="note">Remarkably consistent at not responding.</p>
+          </div>
+          <div class="row">
+            <div class="top"><span class="label">Teamwork</span><span class="dots" aria-label="0 out of 5">○○○○○</span></div>
+            <p class="note">Left everyone hanging.</p>
+          </div>
+          <div class="row">
+            <div class="top"><span class="label">Overall</span><span class="dots" aria-label="0 out of 5">○○○○○</span></div>
+            <p class="note">Has been spoken to.</p>
+          </div>
+
+          <div class="verdict">
+            <p class="hand">See me. Management</p>
+            <div class="stamp">Needs improvement</div>
+          </div>
+        </main>
+      </body>
+      </html>
+    </script>
+
+    <script type="text/plain" data-design="mug">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --bg: #fbe3e8;
+        --navy: #1f2a44;
+        --white: #fff;
+        --saucer: #d9a9b5;
+        --muted: #6b5560;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--navy);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.55;
+        text-align: center;
+      }
+      main { width: 100%; max-width: 440px; }
+      svg { display: block; width: 100%; max-width: 250px; height: auto; margin: 0 auto 26px; }
+      .mug { fill: var(--navy); }
+      .handle { fill: none; stroke: var(--navy); stroke-width: 12; stroke-linecap: round; }
+      .saucer { fill: var(--saucer); }
+      .txt { fill: var(--white); font: 700 14px ui-serif, Georgia, serif; text-anchor: middle; }
+      .cold { fill: none; stroke: var(--saucer); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 9; }
+
+      h1 { margin: 0 0 12px; font-size: clamp(1.7rem, 6vw, 2.3rem); font-weight: 750; letter-spacing: -.02em; line-height: 1.15; }
+      p { margin: 0 auto 8px; max-width: 36ch; color: var(--muted); }
+      </style>
+      </head>
+      <body>
+      <main>
+        <svg viewBox="0 0 220 180" role="img" aria-label="A mug reading World’s okayest server">
+          <path class="cold" d="M82 40 q-8 -12 0 -22 M110 40 q-8 -12 0 -22 M138 40 q-8 -12 0 -22"/>
+          <path class="handle" d="M152 76 h16 a22 22 0 0 1 0 46 h-16"/>
+          <rect class="mug" x="50" y="50" width="106" height="104" rx="16"/>
+          <text class="txt" x="103" y="92">World’s</text>
+          <text class="txt" x="103" y="112">okayest</text>
+          <text class="txt" x="103" y="132">server</text>
+          <ellipse class="saucer" cx="103" cy="158" rx="76" ry="8"/>
+        </svg>
+
+        <h1 style="color: red">Server down</h1>
+        <p>It’s out getting coffee. It said “five minutes.” That was a while ago.</p>
+        <p>Try again later. We’re not its manager.</p>
+      </main>
+      </body>
+      </html>
+    </script>
+
+    <script type="text/plain" data-design="chat">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --bg: #e6eaf1;
+        --card: #fff;
+        --ink: #1b2233;
+        --muted: #6c778c;
+        --bot: #eef0f5;
+        --you: #2f6df6;
+        --ok: #2fb36b;
+        --line: #e3e7ee;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.45;
+      }
+      .chat {
+        width: 100%;
+        max-width: 420px;
+        background: var(--card);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 24px 50px -26px rgba(27, 34, 51, .45);
+      }
+      .head { padding: 16px 20px; border-bottom: 1px solid var(--line); }
+      .name { display: flex; align-items: center; gap: 8px; font-weight: 650; }
+      .name i { width: 9px; height: 9px; border-radius: 50%; background: var(--ok); }
+      .sub { margin-top: 2px; font-size: .85rem; color: var(--muted); }
+
+      .msgs { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
+      .b { max-width: 82%; padding: 10px 14px; border-radius: 18px; font-size: .95rem; }
+      .bot { align-self: flex-start; background: var(--bot); border-bottom-left-radius: 6px; }
+      .you { align-self: flex-end; background: var(--you); color: #fff; border-bottom-right-radius: 6px; }
+      .typing { display: flex; gap: 5px; padding: 14px 16px; }
+      .typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: hop 1.2s ease-in-out infinite; }
+      .typing i:nth-child(2) { animation-delay: .15s; }
+      .typing i:nth-child(3) { animation-delay: .3s; }
+      @keyframes hop { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-5px); opacity: 1; } }
+
+      .foot { padding: 14px 20px 18px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+
+      @media (prefers-reduced-motion: reduce) { .typing i { animation: none; } }
+      .foot b { color: var(--ink); }
+      </style>
+      </head>
+      <body>
+        <main class="chat">
+          <div class="head">
+            <div class="name"><i></i>Support bot</div>
+            <div class="sub"><span style="color: red">Server down</span>. Typically replies: eventually</div>
+          </div>
+          <div class="msgs">
+            <div class="b bot">Hi! How can I help you today?</div>
+            <div class="b you">Your site isn’t loading.</div>
+            <div class="b bot">Wow. Incredible diagnosis. Have you considered a career in IT?</div>
+            <div class="b you">So when will it be back?</div>
+            <div class="b bot">Great question. Someone will look into it. Eventually.</div>
+            <div class="b bot typing" aria-label="The bot is typing"><i></i><i></i><i></i></div>
+          </div>
+          <div class="foot"><b><span style="color: red">Server down</span>.</b> The server isn’t responding, and the bot is also not helping.</div>
+        </main>
+      </body>
+      </html>
+    </script>
+
+    <script type="text/plain" data-design="missing">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --wall: #4f6272;
+        --paper: #f3f1d6;
+        --ink: #1c1c1c;
+        --muted: #55554a;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 28px 20px;
+        background: var(--wall);
+        font-family: ui-serif, Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        line-height: 1.5;
+      }
+      .poster {
+        width: 100%;
+        max-width: 400px;
+        background: var(--paper);
+        padding: 30px 28px 0;
+        text-align: center;
+        transform: rotate(-1deg);
+        box-shadow: 0 22px 40px -20px rgba(0, 0, 0, .65);
+      }
+      h1 {
+        margin: 0;
+        font: 900 clamp(3rem, 16vw, 4.8rem) Impact, "Arial Black", system-ui, sans-serif;
+        letter-spacing: .03em;
+        line-height: 1;
+      }
+      .lede { margin: 6px 0 22px; font-style: italic; color: var(--muted); }
+
+      dl { margin: 0; text-align: left; border-top: 2px solid var(--ink); }
+      .r { padding: 9px 0; border-bottom: 1px solid #c9c7a8; }
+      dt { font-weight: 700; font-size: .9rem; }
+      dd { margin: 0; }
+
+      .ask { margin: 20px 0 24px; font-weight: 700; }
+
+      .tabs { display: flex; height: 112px; border-top: 2px dashed var(--ink); margin: 0 -28px; }
+      .tabs span {
+        flex: 1;
+        padding: 10px 0;
+        border-left: 1px dashed var(--ink);
+        writing-mode: vertical-rl;
+        font: 600 12px system-ui, sans-serif;
+        color: var(--muted);
+      }
+      .tabs span:first-child { border-left: 0; }
+      .tabs .gone { visibility: hidden; }
+      .lede b { font-style: normal; color: var(--ink); }
+      </style>
+      </head>
+      <body>
+        <main class="poster">
+          <h1>MISSING</h1>
+          <p class="lede"><b><span style="color: red">Server down</span>.</b> One server missing. Responds to requests, allegedly.</p>
+
+          <dl>
+            <div class="r"><dt>Last seen</dt><dd>Being useful</dd></div>
+            <div class="r"><dt>Answers to</dt><dd>Nothing, evidently</dd></div>
+            <div class="r"><dt>Distinguishing features</dt><dd>Absent</dd></div>
+            <div class="r"><dt>Reward</dt><dd>Our eternal gratitude</dd></div>
+          </dl>
+
+          <p class="ask">If found, please do not approach. Just tell someone.</p>
+
+          <div class="tabs" aria-hidden="true">
+            <span>Tell someone</span><span>Tell someone</span><span class="gone">Tell someone</span><span>Tell someone</span><span>Tell someone</span><span>Tell someone</span>
+          </div>
+        </main>
+      </body>
+      </html>
+    </script>
+
+    <script type="text/plain" data-design="loading">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --bg: #17142b;
+        --track: #2b2650;
+        --fill: #9b8cff;
+        --text: #ece9ff;
+        --muted: #9a96c4;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.55;
+      }
+      main { width: 100%; max-width: 440px; }
+      h1 { margin: 0 0 22px; font-size: clamp(1.6rem, 5vw, 2.1rem); font-weight: 650; letter-spacing: -.015em; }
+
+      .bar { height: 12px; border-radius: 6px; background: var(--track); overflow: hidden; }
+      .fill { height: 100%; width: 0; border-radius: 6px; background: var(--fill); animation: load 5s cubic-bezier(.2, .7, .3, 1) forwards; }
+      @keyframes load { to { width: 99%; } }
+      .pct { margin: 8px 0 0; text-align: right; font: 13px ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--muted); }
+
+      .msgs { position: relative; height: 1.7em; margin-top: 14px; }
+      .msgs span { position: absolute; inset: 0 auto auto 0; opacity: 0; color: var(--text); animation: msg 16s infinite; }
+      .msgs span:nth-child(2) { animation-delay: 4s; }
+      .msgs span:nth-child(3) { animation-delay: 8s; }
+      .msgs span:nth-child(4) { animation-delay: 12s; }
+      @keyframes msg { 0% { opacity: 0; } 4% { opacity: 1; } 22% { opacity: 1; } 26%, 100% { opacity: 0; } }
+
+      .truth { margin: 40px 0 0; padding-top: 18px; border-top: 1px solid var(--track); color: var(--muted); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .fill { animation: none; width: 99%; }
+        .msgs span { animation: none; opacity: 0; }
+        .msgs span:first-child { opacity: 1; }
+      }
+      .badge { display: inline-block; margin-bottom: 14px; padding: 3px 12px; border-radius: 999px; background: #ff6b81; color: #17142b; font-weight: 700; font-size: .85rem; }
+      </style>
+      </head>
+      <body>
+      <main>
+        <div class="badge">Server down</div>
+        <h1>Loading your page…</h1>
+        <div class="bar" role="img" aria-label="Progress bar stuck at 99 percent"><div class="fill"></div></div>
+        <p class="pct">99%</p>
+        <div class="msgs">
+          <span>Contacting the server…</span>
+          <span>The server is thinking about it…</span>
+          <span>Still 99%. Impressive commitment.</span>
+          <span>This is the part where we stop pretending.</span>
+        </div>
+        <p class="truth">Just kidding. The server is down and isn’t responding. The bar is only here for morale.</p>
+      </main>
+      </body>
+      </html>
+    </script>
+
+    <script type="text/plain" data-design="receipt">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Server down</title>
+      <link rel="icon" href="data:,">
+      <style>
+      :root {
+        --wall: #cfd6df;
+        --paper: #fffefb;
+        --ink: #23262d;
+        --muted: #747a86;
+        --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Courier New", monospace;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px 20px;
+        background: var(--wall);
+        color: var(--ink);
+        font: 14px/1.6 var(--mono);
+      }
+      .receipt {
+        width: 100%;
+        max-width: 340px;
+        filter: drop-shadow(0 14px 18px rgba(35, 38, 45, .25));
+        animation: print 1.8s steps(18) both;
+      }
+      @keyframes print { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+
+      .edge { height: 9px; background-color: var(--paper); background-size: 14px 100%; }
+      .edge.top { background-image: radial-gradient(circle at 7px 0, var(--wall) 5px, transparent 5.5px); }
+      .edge.bottom { background-image: radial-gradient(circle at 7px 100%, var(--wall) 5px, transparent 5.5px); }
+      .body { padding: 14px 24px 18px; background: var(--paper); }
+
+      .c { text-align: center; }
+      h1 { margin: 0; font-size: 1.15rem; font-weight: 700; }
+      .dim { color: var(--muted); }
+      hr { margin: 14px 0; border: 0; border-top: 1px dashed var(--muted); }
+
+      .item { display: flex; align-items: baseline; gap: 6px; }
+      .item .dots { flex: 1; min-width: 12px; border-bottom: 1px dotted var(--muted); transform: translateY(-3px); }
+      .item b { font-weight: 700; text-align: right; }
+      .total { font-weight: 700; font-size: 1.05rem; }
+
+      .bars {
+        height: 50px;
+        width: 78%;
+        margin: 18px auto 6px;
+        background: repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px, var(--ink) 4px 5px, transparent 5px 8px, var(--ink) 8px 11px, transparent 11px 13px);
+      }
+
+      @media (prefers-reduced-motion: reduce) { .receipt { animation: none; } }
+      .down { margin: 8px 0 2px; font-weight: 700; font-size: 1.05rem; letter-spacing: .08em; }
+      </style>
+      </head>
+      <body>
+        <main class="receipt">
+          <div class="edge top"></div>
+          <div class="body">
+            <div class="c">
+              <h1>Server Co.</h1>
+              <div class="down" style="color: red">** SERVER DOWN **</div>
+              <div class="dim">Thank you for visiting</div>
+              <div class="dim">Date: today, probably</div>
+            </div>
+            <hr>
+
+            <div class="item"><span>1 × Your page</span><span class="dots"></span><b>Out of stock</b></div>
+            <div class="item"><span>1 × Our server</span><span class="dots"></span><b>On break</b></div>
+            <div class="item"><span>1 × Excuse</span><span class="dots"></span><b>Not you</b></div>
+            <hr>
+
+            <div class="item total"><span>Total</span><span class="dots"></span><b>$0.00</b></div>
+            <div class="item"><span>Refund</span><span class="dots"></span><b>$0.00</b></div>
+            <hr>
+
+            <div class="dim">Returns: please don’t. There is nothing to return.</div>
+            <div class="dim">Your cashier today: nobody.</div>
+
+            <div class="bars" aria-hidden="true"></div>
+            <div class="c dim">503 503 503</div>
+            <div class="c" style="margin-top:12px">Please come again. Later.</div>
+          </div>
+          <div class="edge bottom"></div>
+        </main>
+      </body>
+      </html>
+    </script>
+
+    <script>
+      (function () {
+        var nodes = document.querySelectorAll(
+          'script[type="text/plain"][data-design]',
+        );
+        var designs = {},
+          names = [];
+        for (var i = 0; i < nodes.length; i++) {
+          designs[nodes[i].getAttribute("data-design")] = nodes[i].textContent;
+          names.push(nodes[i].getAttribute("data-design"));
+        }
+
+        // ?design=receipt forces one design (handy for previewing)
+        var forced = new URLSearchParams(location.search).get("design");
+        var pick;
+        if (forced && designs.hasOwnProperty(forced)) {
+          pick = forced;
+        } else {
+          var KEY = "serverdown:last",
+            last = null;
+          try {
+            last = localStorage.getItem(KEY);
+          } catch (e) {}
+          var pool = names.filter(function (n) {
+            return n !== last;
+          });
+          if (!pool.length) pool = names;
+          pick = pool[Math.floor(Math.random() * pool.length)];
+          try {
+            localStorage.setItem(KEY, pick);
+          } catch (e) {}
+        }
+
+        var doc = new DOMParser().parseFromString(designs[pick], "text/html");
+        document.title = doc.title;
+        var styles = doc.head.querySelectorAll("style");
+        for (var j = 0; j < styles.length; j++) {
+          document.head.appendChild(document.importNode(styles[j], true));
+        }
+        document.body.replaceWith(document.importNode(doc.body, true));
+      })();
+    </script>
+  </body>
 </html>
