@@ -107,20 +107,21 @@
       fetch("../../tunnels.json")
         .then((res) => res.json())
         .then(async (data) => {
-          try {
-            const response = await fetch(data.ha.public_url, {
-              method: "HEAD",
-            });
-            if (response.ok) {
-              window.location.href = data.ha.public_url;
-            } else {
-              window.location.href = "server-down.html";
-              console.error("HA server is not reachable.");
-            }
-          } catch (err) {
-            window.location.href = "server-down.html";
-            console.error("HA server is not reachable.");
-          }
+          // try {
+          //   const response = await fetch(data.ha.public_url, {
+          //     method: "HEAD",
+          //   });
+          //   if (response.ok) {
+          //     window.location.href = data.ha.public_url;
+          //   } else {
+          //     window.location.href = "server-down.html";
+          //     console.error("HA server is not reachable.");
+          //   }
+          // } catch (err) {
+          //   window.location.href = "server-down.html";
+          //   console.error("HA server is not reachable.");
+          // }
+          window.location.href = data.ha.public_url;
         })
         .catch(() => {
           document.body.innerHTML = "Failed to load redirect.";
