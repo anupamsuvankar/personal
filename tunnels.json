@@ -1,26 +1,26 @@
 {
-  "eve": {
-    "public_url": "https://doctor-logo-bottle-pink.trycloudflare.com"
-  },
-  "inventory": {
-    "public_url": "https://mark-assembly-judgment-trailer.trycloudflare.com"
-  },
-  "monitor": {
-    "public_url": "https://jonathan-myrtle-immune-qualifying.trycloudflare.com"
-  },
-  "movie": {
-    "public_url": "https://lows-gzip-monster-journey.trycloudflare.com"
-  },
-  "nas": {
-    "public_url": "https://cameron-look-systems-accompanied.trycloudflare.com"
-  },
-  "personal": {
-    "public_url": "https://homeland-shown-fighter-wisconsin.trycloudflare.com"
-  },
-  "coc": {
-    "public_url": "https://cambridge-object-drama-stockings.trycloudflare.com"
-  },
-  "ha": {
-    "public_url": "https://together-imperial-process-turned.trycloudflare.com"
-  }
+    "eve": {
+        "public_url": "https://doctor-logo-bottle-pink.trycloudflare.com"
+    },
+    "inventory": {
+        "public_url": "https://mark-assembly-judgment-trailer.trycloudflare.com"
+    },
+    "monitor": {
+        "public_url": "https://jonathan-myrtle-immune-qualifying.trycloudflare.com"
+    },
+    "movie": {
+        "public_url": "https://lows-gzip-monster-journey.trycloudflare.com"
+    },
+    "nas": {
+        "public_url": "https://cameron-look-systems-accompanied.trycloudflare.com"
+    },
+    "personal": {
+        "public_url": "https://homeland-shown-fighter-wisconsin.trycloudflare.com"
+    },
+    "coc": {
+        "public_url": "https://cambridge-object-drama-stockings.trycloudflare.com"
+    },
+    "ha": {
+        "public_url": "https://together-imperial-process-turned.trycloudflare.com"
+    }
 }
